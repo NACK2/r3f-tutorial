@@ -7,8 +7,8 @@ const Cube = ({ position, size, color }) => {
   useFrame((state, delta) => { // delta is time since last animation frame (diff in time btwn curr and last frame)
     ref.current.rotation.y += delta
     ref.current.rotation.x += delta
-    ref.current.position.z += Math.sin(state.clock.elapsedTime) * 2 // remember, sin's range is [-1, 1]
-    // console.log(state.clock.elapsedTime)
+    ref.current.position.z = Math.sin(state.clock.elapsedTime) * 2 // remember, sin's range is [-1, 1]
+    // console.log(Math.sin(state.clock.elapsedTime))
   })
 
   return (

@@ -1,19 +1,25 @@
 import { Canvas } from '@react-three/fiber'
+import { PerspectiveCamera } from '@react-three/drei'
 import Cube from './components/Cube'
 import './App.css'
 
 const App = () => {
+  // 33 mins
+  // https://github.com/pmndrs/drei
+  // https://docs.pmnd.rs/
+  // https://threejs.org/docs/
   return (
     <Canvas>
       <directionalLight position={[0, 0, 10]} intensity={1} />
-      {/* <ambientLight intensity={0.3} /> ambient light illuminates every side equally */}
-      <group position={[1, 0, 0]}>
-        <Cube position={[2, 0, -2]} size={[1, 1, 1]} color='red' />
-        <Cube position={[0, -2, 0]} size={[1, 1, 1]} color='green' />
-        <Cube position={[-2, 0, 2]} size={[1, 1, 1]} color='hotpink' />
-        <Cube position={[0, 2, -5]} size={[1, 1, 1]} color='orange' />
-      </group>
-      {/* <Cube position={[0, 0, 0]} size={[1, 1, 1]} color={'hotpink'}/> */}
+      <PerspectiveCamera position={[0, 0, -4]}>
+        {/* <ambientLight intensity={0.3} /> ambient light illuminates every side equally */}
+        <group position={[0, 0, 0]}>
+          <Cube position={[2, 2, 0]} size={[1, 1, 1]} color='red' />
+          <Cube position={[2, -2, 0]} size={[1, 1, 1]} color='green' />
+          <Cube position={[-2, 2, 0]} size={[1, 1, 1]} color='hotpink' />
+          <Cube position={[-2, -2, 0]} size={[1, 1, 1]} color='orange' />
+        </group>
+      </PerspectiveCamera>
     </Canvas>
   )
 }

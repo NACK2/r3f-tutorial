@@ -13,7 +13,7 @@ const TorusKnot = ({ position, size, color }) => {
   return (
     <mesh position={position} ref={ref}>
       <torusKnotGeometry args={size} />
-      <meshStandardMaterial color={color} />
+      <meshStandardMaterial color={color}/>
     </mesh>
   )
 }

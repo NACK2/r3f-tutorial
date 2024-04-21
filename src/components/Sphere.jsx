@@ -13,7 +13,7 @@ const Sphere = ({ position, size, color }) => {
   return (
     <mesh position={position} ref={ref}>
       <sphereGeometry args={size} />
-      <meshStandardMaterial color={color} />
+      <meshStandardMaterial color={color} wireframe />
     </mesh>
   )
 }

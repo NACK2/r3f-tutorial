@@ -14,7 +14,7 @@ const Cube = ({ position, size, color }) => {
   return (
     <mesh position={position} ref={ref}> {/* mesh is building block for 3d objects, storing this cube mesh as a reference */}
       <boxGeometry args={size} /> {/* args are x y z dimension size of box */}
-      <meshStandardMaterial color={color} />
+      <meshStandardMaterial color={color} /> {/* meshStandardMaterial is affected by lighting, meshBasicMaterial */}
     </mesh>
   )
 }
